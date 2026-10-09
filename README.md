@@ -1,5 +1,8 @@
 # Cadence
 
+[![CI](https://github.com/asalafrancis3/cadence/actions/workflows/ci.yml/badge.svg)](https://github.com/asalafrancis3/cadence/actions/workflows/ci.yml)
+[![License: Apache-2.0](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](LICENSE)
+
 **Non-custodial recurring payments for Stellar.** Subscribers approve a bounded
 spending limit, anyone can trigger a charge when a cycle is due, and the
 subscriber can cancel or revoke at any time. Funds never rest in the contract.
