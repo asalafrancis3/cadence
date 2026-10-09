@@ -77,6 +77,15 @@ cadence/
 │   ├── src/errors.rs             stable error codes
 │   ├── src/test.rs               unit tests
 │   └── tests/lifecycle.rs        6-month multi-party integration test
+├── keeper/                       reference keeper bot (polls is_due -> charge -> bump)
+│   ├── src/main.rs               entry point + polling loop
+│   ├── src/config.rs             CLI / env configuration (clap)
+│   ├── src/bot.rs                polling engine
+│   ├── src/client.rs             Soroban JSON-RPC wrappers
+│   ├── src/errors.rs             error classification matrix
+│   ├── src/backoff.rs            exponential backoff with jitter
+│   ├── Dockerfile                multi-stage production build
+│   └── .env.example              env var template
 ├── frontend/                     Next.js (App Router) + TypeScript
 │   ├── lib/cadence.ts            typed contract client (simulate -> sign -> submit)
 │   ├── lib/wallet.ts             Stellar Wallets Kit adapter (single file)

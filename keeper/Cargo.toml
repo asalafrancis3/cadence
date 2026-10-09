@@ -1,0 +1,27 @@
+[package]
+name = "keeper"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+description = "Reference keeper bot for the Cadence subscription protocol – polls is_due, submits charge + bump_subscription"
+publish = false
+
+[[bin]]
+name = "keeper"
+path = "src/main.rs"
+
+[dependencies]
+tokio = { version = "1", features = ["full"] }
+clap = { version = "4", features = ["derive", "env"] }
+dotenvy = "0.15"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["json", "env-filter"] }
+rand = "0.8"
+reqwest = { version = "0.12", features = ["json"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+thiserror = "2"
+hex = "0.4"
+
+[dev-dependencies]
+tokio = { version = "1", features = ["full", "test-util"] }

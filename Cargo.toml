@@ -1,6 +1,6 @@
 [workspace]
 resolver = "2"
-members = ["contracts/*"]
+members = ["contracts/*", "keeper"]
 
 [workspace.dependencies]
 # Pinned to the major that matches the current Stellar protocol. Check
